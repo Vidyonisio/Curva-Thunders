@@ -1,0 +1,305 @@
+Sub Env_Plan_Thun()
+
+Dim WP As Workbook 'Pasta de Trabalho Atual'
+Dim WS As Workbook 'Nova Pasta de Trabalha'
+Dim WPSheet As Worksheet 'Planilha atual'
+
+'Definição das Planilhas Trabalhadas'
+
+Set WP = Workbooks("Curva Forward BBCE.xlsm")
+Set WPSheet = WP.Sheets("Inputs")
+pasta = Application.ThisWorkbook.Path & "\Curva Thunders.xlsx"
+Set WS = Workbooks.Open(pasta)
+Set WSSheet22 = WS.Sheets("2022")
+Set WSSheet23 = WS.Sheets("2023")
+Set WSSheet24 = WS.Sheets("2024")
+Set WSSheet25 = WS.Sheets("2025")
+Set WSSheet26 = WS.Sheets("2026")
+Set WSSheet27 = WS.Sheets("2027")
+Set WSSheet28 = WS.Sheets("2028")
+'Set WSSheet29 = WS.Sheets("2029")'
+'Set WSSheet30 = WS.Sheets("2030")'
+WPSheet.Activate
+
+'Envio dos Dados para a Planilha Curva Thunder'
+
+
+Dim x As Integer
+' Set numrows = number of rows of data.
+NumRows = ActiveSheet.Range("A2", Range("A2").End(xlDown)).Rows.Count
+' Select cell a1.
+ActiveSheet.Range("A2").Select
+' Establish "For" loop to loop "numrows" number of times.
+For x = 1 To NumRows + 1
+
+    '2022'
+    If WPSheet.Cells(x, 5) = "2022" Then
+        If WPSheet.Cells(x, 4) = "1" Then
+          WSSheet22.Cells(5, 3) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "2" Then
+          WSSheet22.Cells(5, 4) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "3" Then
+          WSSheet22.Cells(5, 5) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "4" Then
+          WSSheet22.Cells(5, 6) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "5" Then
+          WSSheet22.Cells(5, 7) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "6" Then
+          WSSheet22.Cells(5, 8) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "7" Then
+          WSSheet22.Cells(5, 9) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "8" Then
+          WSSheet22.Cells(5, 10) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "9" Then
+          WSSheet22.Cells(5, 11) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "10" Then
+          WSSheet22.Cells(5, 12) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "11" Then
+          WSSheet22.Cells(5, 13) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "12" Then
+          WSSheet22.Cells(5, 14) = WPSheet.Cells(x, 2)
+        End If
+    End If
+        
+    '2023'
+    If WPSheet.Cells(x, 5) = "2023" Then
+        If WPSheet.Cells(x, 4) = "1" Then
+          WSSheet23.Cells(5, 3) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "2" Then
+          WSSheet23.Cells(5, 4) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "3" Then
+          WSSheet23.Cells(5, 5) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "4" Then
+          WSSheet23.Cells(5, 6) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "5" Then
+          WSSheet23.Cells(5, 7) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "6" Then
+          WSSheet23.Cells(5, 8) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "7" Then
+          WSSheet23.Cells(5, 9) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "8" Then
+          WSSheet23.Cells(5, 10) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "9" Then
+          WSSheet23.Cells(5, 11) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "10" Then
+          WSSheet23.Cells(5, 12) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "11" Then
+          WSSheet23.Cells(5, 13) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "12" Then
+          WSSheet23.Cells(5, 14) = WPSheet.Cells(x, 2)
+        End If
+    End If
+
+    '2024'
+    If WPSheet.Cells(x, 5) = "2024" Then
+        If WPSheet.Cells(x, 4) = "1" Then
+          WSSheet24.Cells(5, 3) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "2" Then
+          WSSheet24.Cells(5, 4) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "3" Then
+          WSSheet24.Cells(5, 5) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "4" Then
+          WSSheet24.Cells(5, 6) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "5" Then
+          WSSheet24.Cells(5, 7) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "6" Then
+          WSSheet24.Cells(5, 8) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "7" Then
+          WSSheet24.Cells(5, 9) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "8" Then
+          WSSheet24.Cells(5, 10) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "9" Then
+          WSSheet24.Cells(5, 11) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "10" Then
+          WSSheet24.Cells(5, 12) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "11" Then
+          WSSheet24.Cells(5, 13) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "12" Then
+          WSSheet24.Cells(5, 14) = WPSheet.Cells(x, 2)
+        End If
+    End If
+    
+    '2025'
+    If WPSheet.Cells(x, 5) = "2025" Then
+        If WPSheet.Cells(x, 4) = "1" Then
+          WSSheet25.Cells(5, 3) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "2" Then
+          WSSheet25.Cells(5, 4) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "3" Then
+          WSSheet25.Cells(5, 5) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "4" Then
+          WSSheet25.Cells(5, 6) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "5" Then
+          WSSheet25.Cells(5, 7) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "6" Then
+          WSSheet25.Cells(5, 8) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "7" Then
+          WSSheet25.Cells(5, 9) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "8" Then
+          WSSheet25.Cells(5, 10) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "9" Then
+          WSSheet25.Cells(5, 11) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "10" Then
+          WSSheet25.Cells(5, 12) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "11" Then
+          WSSheet25.Cells(5, 13) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "12" Then
+          WSSheet25.Cells(5, 14) = WPSheet.Cells(x, 2)
+        End If
+    End If
+    
+    '2026'
+    If WPSheet.Cells(x, 5) = "2026" Then
+        If WPSheet.Cells(x, 4) = "1" Then
+          WSSheet26.Cells(5, 3) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "2" Then
+          WSSheet26.Cells(5, 4) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "3" Then
+          WSSheet26.Cells(5, 5) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "4" Then
+          WSSheet26.Cells(5, 6) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "5" Then
+          WSSheet26.Cells(5, 7) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "6" Then
+          WSSheet26.Cells(5, 8) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "7" Then
+          WSSheet26.Cells(5, 9) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "8" Then
+          WSSheet26.Cells(5, 10) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "9" Then
+          WSSheet26.Cells(5, 11) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "10" Then
+          WSSheet26.Cells(5, 12) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "11" Then
+          WSSheet26.Cells(5, 13) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "12" Then
+          WSSheet26.Cells(5, 14) = WPSheet.Cells(x, 2)
+        End If
+    End If
+
+    '2027'
+    If WPSheet.Cells(x, 5) = "2027" Then
+        If WPSheet.Cells(x, 4) = "1" Then
+          WSSheet27.Cells(5, 3) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "2" Then
+          WSSheet27.Cells(5, 4) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "3" Then
+          WSSheet27.Cells(5, 5) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "4" Then
+          WSSheet27.Cells(5, 6) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "5" Then
+          WSSheet27.Cells(5, 7) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "6" Then
+          WSSheet27.Cells(5, 8) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "7" Then
+          WSSheet27.Cells(5, 9) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "8" Then
+          WSSheet27.Cells(5, 10) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "9" Then
+          WSSheet27.Cells(5, 11) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "10" Then
+          WSSheet27.Cells(5, 12) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "11" Then
+          WSSheet27.Cells(5, 13) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "12" Then
+          WSSheet27.Cells(5, 14) = WPSheet.Cells(x, 2)
+        End If
+    End If
+    
+
+    '2028'
+    If WPSheet.Cells(x, 5) = "2028" Then
+        If WPSheet.Cells(x, 4) = "1" Then
+          WSSheet28.Cells(5, 3) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "2" Then
+          WSSheet28.Cells(5, 4) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "3" Then
+          WSSheet28.Cells(5, 5) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "4" Then
+          WSSheet28.Cells(5, 6) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "5" Then
+          WSSheet28.Cells(5, 7) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "6" Then
+          WSSheet28.Cells(5, 8) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "7" Then
+          WSSheet28.Cells(5, 9) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "8" Then
+          WSSheet28.Cells(5, 10) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "9" Then
+          WSSheet28.Cells(5, 11) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "10" Then
+          WSSheet28.Cells(5, 12) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "11" Then
+          WSSheet28.Cells(5, 13) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "12" Then
+          WSSheet28.Cells(5, 14) = WPSheet.Cells(x, 2)
+        End If
+    End If
+    
+
+    '2029'
+    If WPSheet.Cells(x, 5) = "2029" Then
+        If WPSheet.Cells(x, 4) = "1" Then
+          WSSheet29.Cells(5, 3) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "2" Then
+          WSSheet29.Cells(5, 4) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "3" Then
+          WSSheet29.Cells(5, 5) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "4" Then
+          WSSheet29.Cells(5, 6) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "5" Then
+          WSSheet29.Cells(5, 7) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "6" Then
+          WSSheet29.Cells(5, 8) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "7" Then
+          WSSheet29.Cells(5, 9) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "8" Then
+          WSSheet29.Cells(5, 10) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "9" Then
+          WSSheet29.Cells(5, 11) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "10" Then
+          WSSheet29.Cells(5, 12) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "11" Then
+          WSSheet29.Cells(5, 13) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "12" Then
+          WSSheet29.Cells(5, 14) = WPSheet.Cells(x, 2)
+        End If
+    End If
+    
+
+    '2030'
+    If WPSheet.Cells(x, 5) = "2030" Then
+        If WPSheet.Cells(x, 4) = "1" Then
+          WSSheet30.Cells(5, 3) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "2" Then
+          WSSheet30.Cells(5, 4) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "3" Then
+          WSSheet30.Cells(5, 5) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "4" Then
+          WSSheet30.Cells(5, 6) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "5" Then
+          WSSheet30.Cells(5, 7) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "6" Then
+          WSSheet30.Cells(5, 8) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "7" Then
+          WSSheet30.Cells(5, 9) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "8" Then
+          WSSheet30.Cells(5, 10) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "9" Then
+          WSSheet30.Cells(5, 11) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "10" Then
+          WSSheet30.Cells(5, 12) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "11" Then
+          WSSheet30.Cells(5, 13) = WPSheet.Cells(x, 2)
+        ElseIf WPSheet.Cells(x, 4) = "12" Then
+          WSSheet30.Cells(5, 14) = WPSheet.Cells(x, 2)
+        End If
+    End If
+
+   ActiveCell.Offset(1, 0).Select
+Next
+
+WS.Save
+WS.Close
+
+End Sub
