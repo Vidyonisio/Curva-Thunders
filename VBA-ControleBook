@@ -1,0 +1,171 @@
+Sub Env_Plan_Thun()
+
+Dim WP As Workbook 'Pasta de Trabalho Atual'
+Dim WS As Workbook 'Nova Pasta de Trabalha'
+Dim WPSheet As Worksheet 'Planilha atual'
+
+'Definição das Planilhas Trabalhadas'
+
+Set WP = Workbooks("Controle de Book.xlsm")
+Set WPSheet = WP.Sheets("Mkt Data")
+pasta = Application.ThisWorkbook.Path & "\Curva Thunders.xlsx"
+Set WS = Workbooks.Open(pasta)
+Set WSSheet22 = WS.Sheets("2022")
+Set WSSheet23 = WS.Sheets("2023")
+Set WSSheet24 = WS.Sheets("2024")
+Set WSSheet25 = WS.Sheets("2025")
+Set WSSheet26 = WS.Sheets("2026")
+Set WSSheet27 = WS.Sheets("2027")
+Set WSSheet28 = WS.Sheets("2028")
+'Set WSSheet29 = WS.Sheets("2029")'
+'Set WSSheet30 = WS.Sheets("2030")'
+WPSheet.Activate
+
+'Envio dos Dados para a Planilha Curva Thunder'
+
+
+Dim x As Integer
+' Set numrows = number of rows of data.
+NumRows = WPSheet.Range("Z9", Range("Z9").End(xlDown)).Rows.Count
+' Select cell a1.
+WPSheet.Range("Z9").Select
+' Establish "For" loop to loop "numrows" number of times.
+For x = 1 To NumRows + 1
+
+    '2022'
+    If WPSheet.Cells(x + 8, 90) = "2022" Then
+        For j = 1 To 12
+            If WPSheet.Cells(x + 8, 89) = j Then
+              WSSheet22.Cells(5, j + 2) = WPSheet.Cells(x + 8, 26)
+              WSSheet22.Cells(6, j + 2) = WPSheet.Cells(x + 8, 39)
+              WSSheet22.Cells(7, j + 2) = WPSheet.Cells(x + 8, 52)
+              WSSheet22.Cells(8, j + 2) = WPSheet.Cells(x + 8, 65)
+              WSSheet22.Cells(11, j + 2) = WPSheet.Cells(x + 8, 21)
+              WSSheet22.Cells(13, j + 2) = WPSheet.Cells(x + 8, 22)
+            End If
+        Next
+        j = 1
+        
+    '2023'
+    ElseIf WPSheet.Cells(x + 8, 90) = "2023" Then
+        For j = 1 To 12
+            If WPSheet.Cells(x + 8, 89) = j Then
+                WSSheet23.Cells(5, j + 2) = WPSheet.Cells(x + 8, 26)
+                WSSheet23.Cells(6, j + 2) = WPSheet.Cells(x + 8, 39)
+                WSSheet23.Cells(7, j + 2) = WPSheet.Cells(x + 8, 52)
+                WSSheet23.Cells(8, j + 2) = WPSheet.Cells(x + 8, 65)
+                WSSheet23.Cells(11, j + 2) = WPSheet.Cells(x + 8, 21)
+                WSSheet23.Cells(13, j + 2) = WPSheet.Cells(x + 8, 22)
+            End If
+        Next
+        j = 1
+
+    '2024'
+    ElseIf WPSheet.Cells(x + 8, 90) = "2024" Then
+        For j = 1 To 12
+            If WPSheet.Cells(x + 8, 89) = j Then
+                WSSheet24.Cells(5, j + 2) = WPSheet.Cells(x + 8, 26)
+                WSSheet24.Cells(6, j + 2) = WPSheet.Cells(x + 8, 39)
+                WSSheet24.Cells(7, j + 2) = WPSheet.Cells(x + 8, 52)
+                WSSheet24.Cells(8, j + 2) = WPSheet.Cells(x + 8, 65)
+                WSSheet24.Cells(11, j + 2) = WPSheet.Cells(x + 8, 21)
+                WSSheet24.Cells(13, j + 2) = WPSheet.Cells(x + 8, 22)
+            End If
+        Next
+        j = 1
+    
+    '2025'
+    ElseIf WPSheet.Cells(x + 8, 90) = "2025" Then
+        For j = 1 To 12
+            If WPSheet.Cells(x + 8, 89) = j Then
+                WSSheet25.Cells(5, j + 2) = WPSheet.Cells(x + 8, 26)
+                WSSheet25.Cells(6, j + 2) = WPSheet.Cells(x + 8, 39)
+                WSSheet25.Cells(7, j + 2) = WPSheet.Cells(x + 8, 52)
+                WSSheet25.Cells(8, j + 2) = WPSheet.Cells(x + 8, 65)
+                WSSheet25.Cells(11, j + 2) = WPSheet.Cells(x + 8, 21)
+                WSSheet25.Cells(13, j + 2) = WPSheet.Cells(x + 8, 22)
+            End If
+        Next
+        j = 1
+    '2026'
+    ElseIf WPSheet.Cells(x + 8, 90) = "2026" Then
+        For j = 1 To 12
+            If WPSheet.Cells(x + 8, 89) = j Then
+                WSSheet26.Cells(5, j + 2) = WPSheet.Cells(x + 8, 26)
+                WSSheet26.Cells(6, j + 2) = WPSheet.Cells(x + 8, 39)
+                WSSheet26.Cells(7, j + 2) = WPSheet.Cells(x + 8, 52)
+                WSSheet26.Cells(8, j + 2) = WPSheet.Cells(x + 8, 65)
+                WSSheet26.Cells(11, j + 2) = WPSheet.Cells(x + 8, 21)
+                WSSheet26.Cells(13, j + 2) = WPSheet.Cells(x + 8, 22)
+            End If
+        Next
+        j = 1
+
+    '2027'
+    ElseIf WPSheet.Cells(x + 8, 90) = "2027" Then
+        For j = 1 To 12
+            If WPSheet.Cells(x + 8, 89) = j Then
+                WSSheet27.Cells(5, j + 2) = WPSheet.Cells(x + 8, 26)
+                WSSheet27.Cells(6, j + 2) = WPSheet.Cells(x + 8, 39)
+                WSSheet27.Cells(7, j + 2) = WPSheet.Cells(x + 8, 52)
+                WSSheet27.Cells(8, j + 2) = WPSheet.Cells(x + 8, 65)
+                WSSheet27.Cells(11, j + 2) = WPSheet.Cells(x + 8, 21)
+                WSSheet27.Cells(13, j + 2) = WPSheet.Cells(x + 8, 22)
+            End If
+        Next
+        j = 1
+    
+
+    '2028'
+    ElseIf WPSheet.Cells(x + 8, 90) = "2028" Then
+        For j = 1 To 12
+            If WPSheet.Cells(x + 8, 89) = j Then
+                WSSheet28.Cells(5, j + 2) = WPSheet.Cells(x + 8, 26)
+                WSSheet28.Cells(6, j + 2) = WPSheet.Cells(x + 8, 39)
+                WSSheet28.Cells(7, j + 2) = WPSheet.Cells(x + 8, 52)
+                WSSheet28.Cells(8, j + 2) = WPSheet.Cells(x + 8, 65)
+                WSSheet28.Cells(11, j + 2) = WPSheet.Cells(x + 8, 21)
+                WSSheet28.Cells(13, j + 2) = WPSheet.Cells(x + 8, 22)
+            End If
+        Next
+        j = 1
+    
+
+    '2029'
+    ElseIf WPSheet.Cells(x + 8, 90) = "2029" Then
+        For j = 1 To 12
+            If WPSheet.Cells(x + 8, 89) = j Then
+                WSSheet29.Cells(5, j + 2) = WPSheet.Cells(x + 8, 26)
+                WSSheet29.Cells(6, j + 2) = WPSheet.Cells(x + 8, 39)
+                WSSheet29.Cells(7, j + 2) = WPSheet.Cells(x + 8, 52)
+                WSSheet29.Cells(8, j + 2) = WPSheet.Cells(x + 8, 65)
+                WSSheet29.Cells(11, j + 2) = WPSheet.Cells(x + 8, 21)
+                WSSheet29.Cells(13, j + 2) = WPSheet.Cells(x + 8, 22)
+            End If
+        Next
+        j = 1
+    
+
+    '2030'
+    ElseIf WPSheet.Cells(x + 8, 90) = "2030" Then
+        For j = 1 To 12
+            If WPSheet.Cells(x + 8, 89) = j Then
+                WSSheet30.Cells(5, j + 2) = WPSheet.Cells(x + 8, 26)
+                WSSheet30.Cells(6, j + 2) = WPSheet.Cells(x + 8, 39)
+                WSSheet30.Cells(7, j + 2) = WPSheet.Cells(x + 8, 52)
+                WSSheet30.Cells(8, j + 2) = WPSheet.Cells(x + 8, 65)
+                WSSheet30.Cells(11, j + 2) = WPSheet.Cells(x + 8, 21)
+                WSSheet30.Cells(13, j + 2) = WPSheet.Cells(x + 8, 22)
+            End If
+        Next
+        j = 1
+    End If
+
+   ActiveCell.Offset(1, 0).Select
+Next
+
+WS.Save
+'WS.Close'
+
+End Sub
+
